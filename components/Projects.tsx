@@ -7,17 +7,17 @@ export default function Projects() {
   {
     title: "Flipkart Website Testing",
     desc: "Manual QA testing including test plan, test cases and bug reporting.",
-    link: "/projects/flipkart-testing.pdf",
+    link: "/Projects/flipkart-testing.pdf",
   },
   {
     title: "API Testing Case Study",
     desc: "API validation using Postman with response verification.",
-    link: "/projects/api-testing.pdf",
+    link: "/Projects/api-testing.pdf",
   },
   {
     title: "Jira Bug Tracking Demo",
     desc: "Agile QA workflow demonstration using Jira issue lifecycle.",
-    link: "/projects/jira-demo.pdf",
+    link: "/Projects/jira-demo.pdf",
   },
 ];
 
