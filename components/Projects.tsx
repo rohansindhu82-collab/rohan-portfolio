@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 export default function Projects() {
-const projects = [
+  const projects = [
   {
     title: "Flipkart Website Testing",
-    desc: "Manual testing project including test cases and bug reporting.",
+    desc: "Manual QA testing including test plan, test cases and bug reporting.",
     link: "/projects/flipkart-testing.pdf",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: "Jira Bug Tracking Demo",
-    desc: "Agile QA workflow demonstration using Jira.",
+    desc: "Agile QA workflow demonstration using Jira issue lifecycle.",
     link: "/projects/jira-demo.pdf",
   },
 ];
@@ -40,7 +40,7 @@ const projects = [
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, delay: i * 0.2 }}
       viewport={{ once: true }}
       className="border border-gray-700 rounded-xl p-8 hover:bg-white hover:text-black transition duration-300"
     >
