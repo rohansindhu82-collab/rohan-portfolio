@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="min-h-screen bg-black text-white flex items-center justify-center"
-    >
+    <section id="contact" 
+    className="min-h-screen bg-black text-white flex items-center justify-center">
       <motion.div
         className="text-center px-6"
         initial={{ opacity: 0, y: 60 }}

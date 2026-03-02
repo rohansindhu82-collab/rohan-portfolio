@@ -22,8 +22,7 @@ export default function Projects() {
 ];
 
   return (
-    <section
-      id="projects"
+    <section id="projects"
       className="min-h-screen bg-black text-white flex items-center"
     >
       <div className="max-w-6xl mx-auto px-6">

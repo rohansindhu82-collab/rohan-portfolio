@@ -8,16 +8,23 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-
+import PageWrapper from "@/components/PageWrapper";
+import MagneticButton from "@/components/MagneticButton";
+import SmoothScroll from "@/components/SmoothScroll";
+import QADashboard from "@/components/QADashboard";
 <About />
+import HireMe from "@/components/HireMe";
+
+
+<HireMe />
 export default function Home() {
   return (
-    <>
+    <><PageWrapper>
   <Navbar />
-  <main>Hero Section</main>
   <About />
-  <Experience />
   <Skills />
+  <Experience />
+  <QADashboard />
   <Projects />
   <Contact />
 <main className="relative bg-black text-white min-h-screen flex items-center justify-center overflow-hidden">      
@@ -68,13 +75,17 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2 }}
     >
+           <MagneticButton>
       <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:scale-105 transition">
         View Experience
       </button>
+     </MagneticButton>
 
-      <button className="border border-gray-600 px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
+     <MagneticButton>
+       <button className="border border-gray-600 px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
         Download Resume
       </button>
+      </MagneticButton>
     </motion.div>
   </div>
 
@@ -90,6 +101,7 @@ export default function Home() {
 </motion.section>
 
     </main>
+    </PageWrapper>
     </>
   );
 }
