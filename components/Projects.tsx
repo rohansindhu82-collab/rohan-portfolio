@@ -3,24 +3,23 @@
 import { motion } from "framer-motion";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "QA Automation Framework",
-      desc: "Designed automation testing workflow using Selenium concepts and structured test cases.",
-    },
-    {
-      title: "Bug Tracking System",
-      desc: "Simulated defect lifecycle management using Jira workflow and reporting methodology.",
-    },
-    {
-      title: "Customer Experience Optimization",
-      desc: "Improved escalation handling quality resulting in higher resolution efficiency.",
-    },
-    {
-      title: "API Testing Practice",
-      desc: "Performed API validation and response verification using Postman collections.",
-    },
-  ];
+const projects = [
+  {
+    title: "Flipkart Website Testing",
+    desc: "Manual testing project including test cases and bug reporting.",
+    link: "/projects/flipkart-testing.pdf",
+  },
+  {
+    title: "API Testing Case Study",
+    desc: "API validation using Postman with response verification.",
+    link: "/projects/api-testing.pdf",
+  },
+  {
+    title: "Jira Bug Tracking Demo",
+    desc: "Agile QA workflow demonstration using Jira.",
+    link: "/projects/jira-demo.pdf",
+  },
+];
 
   return (
     <section
@@ -32,20 +31,29 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              viewport={{ once: true }}
-              className="border border-gray-700 rounded-xl p-8 hover:bg-white hover:text-black transition duration-300"
-            >
-              <h3 className="text-2xl font-semibold mb-3">
-                {project.title}
-              </h3>
-              <p className="text-gray-400">{project.desc}</p>
-            </motion.div>
-          ))}
+  <a
+    key={i}
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="border border-gray-700 rounded-xl p-8 hover:bg-white hover:text-black transition duration-300"
+    >
+      <h3 className="text-2xl font-semibold mb-3">
+        {project.title}
+      </h3>
+
+      <p className="text-gray-400">
+        {project.desc}
+      </p>
+    </motion.div>
+  </a>
+))}
         </div>
       </div>
     </section>
